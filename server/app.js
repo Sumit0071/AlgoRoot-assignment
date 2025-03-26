@@ -13,7 +13,7 @@ const DATABASE_URL = process.env.DATABASE_URL;
 const app = express();
 app.use( express.json() );
 const CORSOPTIONS = {
-    origin: "http://localhost:5173",
+    origin: process.env.VITE_FRONTEND_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
